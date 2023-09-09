@@ -1,0 +1,1058 @@
+
+body {
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+span {
+    text-decoration: underline;
+}
+
+body p {
+    font-size: 1em;
+}
+
+h2 {
+    font-family: 'Oooh Baby', cursive;
+    font-size: 2em;
+    align-self: start;
+}
+
+.first-inner-container {
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(19, minmax(auto, 29px)); /*32, 25px*/
+    background-color: #0074d9;
+    color: #f3f3f3;
+    grid-template-areas: 
+    ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+    ".. .. .. .. .. .. .. .. .. fc fc fc fc fc .. .."
+    ".. .. .. .. .. .. .. .. .. fc fc fc fc fc .. .."
+    ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+    ".. h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 .."
+    ".. h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 .."
+    ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+    ".. pp pp pp pp pp pp pp pp pp pp pp pp pp pp .."
+    ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+    ".. sc sc sc sc .. .. .. .. .. .. .. .. .. .. .."
+    ".. sc sc sc sc .. .. .. .. .. .. .. .. .. .. .."
+    ".. .. mm mm mm mm mm mm mm mm mm mm mm mm .. .."
+    ".. .. mm mm mm mm mm mm mm mm mm mm mm mm .. .."
+    ".. .. mm mm mm mm mm mm mm mm mm mm mm mm .. .."
+    ".. .. mm mm mm mm mm mm mm mm mm mm mm mm .. .."
+    ".. .. mm mm mm mm mm mm mm mm mm mm mm mm .. .."
+    ".. .. mm mm mm mm mm mm mm mm mm mm mm mm .. .."
+    ".. .. mm mm mm mm mm mm mm mm mm mm mm mm .. .."
+    ".. .. mm mm mm mm mm mm mm mm mm mm mm mm .. .."
+    ".. .. mm mm mm mm mm mm mm mm mm mm mm mm .. .."
+    ;
+
+}
+
+.first-cloud {
+    grid-area: fc;
+}
+
+.second-cloud {
+    grid-area: sc;
+}
+
+.mountain {
+    grid-area: mm;
+    align-self: end;
+}
+
+h1 {
+    grid-area: h1;
+    margin-block-start: 0;
+    font-family: 'Pacifico', cursive;
+    font-size: 4em;
+}
+
+.first-inner-container h2 {
+    grid-area: pp;
+    font-family: 'Nunito', sans-serif;
+}
+
+.first-inner-container > * {
+    justify-self: center;
+}
+
+@media screen and (max-width: 600px) {
+    .mountain {
+        width: 100%;
+    }
+    /* h1 {
+        font-size: 18vw;
+    } */
+}
+
+@media screen and (max-width: 400px) {
+    .first-cloud,
+    .second-cloud {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .first-inner-container {
+        grid-template-rows: repeat(16, minmax(auto, 29px));
+        grid-template-areas: 
+    ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+    ".. .. .. .. .. .. .. .. .. fc fc fc fc fc .. .."
+    ".. .. .. .. .. .. .. .. .. fc fc fc fc fc .. .."
+    ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+    ".. h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 .."
+    ".. h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 .."
+    ".. pp pp pp pp pp pp pp pp pp pp pp pp pp pp .."
+    ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+    ".. sc sc sc sc .. .. .. .. .. .. .. .. .. .. .."
+    ".. sc sc sc sc .. .. .. .. .. .. .. .. .. .. .."
+    ".. .. mm mm mm mm mm mm mm mm mm mm mm mm .. .."
+    ".. .. mm mm mm mm mm mm mm mm mm mm mm mm .. .."
+    ".. .. mm mm mm mm mm mm mm mm mm mm mm mm .. .."
+    ".. .. mm mm mm mm mm mm mm mm mm mm mm mm .. .."
+    ".. .. mm mm mm mm mm mm mm mm mm mm mm mm .. .."
+    ".. .. mm mm mm mm mm mm mm mm mm mm mm mm .. .."
+    ;
+    }
+
+    h1 {
+        font-size: 3em;
+    }
+    .last-inner-container {
+        grid-template-rows: repeat(13, minmax(29px, auto));
+        grid-template-areas: 
+        ".. .. .. h8 h8 h8 h8 h8 h8 h8 h8 h8 h8 .. .. .."
+        ".. .. .. h9 h9 h9 h9 h9 h9 h9 h9 h9 h9 .. .. .."
+        ".. .. .. p6 p6 p6 p6 p6 p6 p6 p6 p6 p6 .. .. .."
+        ".. .. .. p6 p6 p6 p6 p6 p6 p6 p6 p6 p6 .. .. .."
+        ".. .. .. p6 p6 p6 p6 p6 p6 p6 p6 p6 p6 .. .. .."
+        ".. .. .. p6 p6 p6 p6 p6 p6 p6 p6 p6 p6 .. .. .."
+        ".. .. .. p6 p6 p6 p6 p6 p6 p6 p6 p6 p6 .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ".. .. .. .. .. .. bb bb bb bb .. .. .. .. .. .."
+        ".. .. .. .. .. .. bb bb bb bb .. .. .. .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ;
+    }
+
+    .second-inner-container {
+        grid-template-rows: repeat(19, minmax(29px, auto));
+        grid-template-areas: 
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ".. .. .. .. .. ff ff ff ff ff ff .. .. .. .. .."
+        ".. .. .. .. .. ff ff ff ff ff ff .. .. .. .. .."
+        ".. .. .. .. .. ff ff ff ff ff ff .. .. .. .. .."
+        ".. .. .. .. .. ff ff ff ff ff ff .. .. .. .. .."
+        ".. .. .. .. .. ff ff ff ff ff ff .. .. .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ".. .. .. .. .. h2 h2 h2 h2 h2 h2 .. .. .. .. .."
+        ".. .. .. .. .. h2 h2 h2 h2 h2 h2 .. .. .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ".. .. .. p2 p2 p2 p2 p2 p2 p2 p2 p2 p2 .. .. .."
+        ".. .. .. p2 p2 p2 p2 p2 p2 p2 p2 p2 p2 .. .. .."
+        ".. .. .. p2 p2 p2 p2 p2 p2 p2 p2 p2 p2 .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        "hr hr hr hr hr hr hr hr hr hr hr hr hr hr hr hr"
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ;
+    }
+}
+
+@media screen and (max-width: 471px) {
+    .first-inner-container {
+        grid-template-rows: repeat(14, minmax(auto, 29px));
+        grid-template-areas: 
+    ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+    ".. .. .. .. .. .. .. .. .. fc fc fc fc fc .. .."
+    ".. .. .. .. .. .. .. .. .. fc fc fc fc fc .. .."
+    ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+    ".. h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 .."
+    ".. h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 .."
+    ".. pp pp pp pp pp pp pp pp pp pp pp pp pp pp .."
+    ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+    ".. sc sc sc sc .. .. .. .. .. .. .. .. .. .. .."
+    ".. sc sc sc sc .. .. .. .. .. .. .. .. .. .. .."
+    ".. .. mm mm mm mm mm mm mm mm mm mm mm mm .. .."
+    ".. .. mm mm mm mm mm mm mm mm mm mm mm mm .. .."
+    ".. .. mm mm mm mm mm mm mm mm mm mm mm mm .. .."
+    ".. .. mm mm mm mm mm mm mm mm mm mm mm mm .. .."
+    ;
+    }
+
+    .second-cloud {
+        width: 90%;
+    }
+    h1 {
+        font-size: 3em;
+    }
+
+    .last-inner-container {
+        grid-template-rows: repeat(13, minmax(29px, auto));
+        grid-template-areas: 
+        ".. .. .. h8 h8 h8 h8 h8 h8 h8 h8 h8 h8 .. .. .."
+        ".. .. .. h9 h9 h9 h9 h9 h9 h9 h9 h9 h9 .. .. .."
+        ".. .. .. p6 p6 p6 p6 p6 p6 p6 p6 p6 p6 .. .. .."
+        ".. .. .. p6 p6 p6 p6 p6 p6 p6 p6 p6 p6 .. .. .."
+        ".. .. .. p6 p6 p6 p6 p6 p6 p6 p6 p6 p6 .. .. .."
+        ".. .. .. p6 p6 p6 p6 p6 p6 p6 p6 p6 p6 .. .. .."
+        ".. .. .. p6 p6 p6 p6 p6 p6 p6 p6 p6 p6 .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ".. .. .. .. .. .. bb bb bb bb .. .. .. .. .. .."
+        ".. .. .. .. .. .. bb bb bb bb .. .. .. .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ;
+    }
+
+    .second-inner-container {
+        grid-template-rows: repeat(19, minmax(29px, auto));
+        grid-template-areas: 
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ".. .. .. .. .. ff ff ff ff ff ff .. .. .. .. .."
+        ".. .. .. .. .. ff ff ff ff ff ff .. .. .. .. .."
+        ".. .. .. .. .. ff ff ff ff ff ff .. .. .. .. .."
+        ".. .. .. .. .. ff ff ff ff ff ff .. .. .. .. .."
+        ".. .. .. .. .. ff ff ff ff ff ff .. .. .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ".. .. .. .. .. h2 h2 h2 h2 h2 h2 .. .. .. .. .."
+        ".. .. .. .. .. h2 h2 h2 h2 h2 h2 .. .. .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ".. .. .. p2 p2 p2 p2 p2 p2 p2 p2 p2 p2 .. .. .."
+        ".. .. .. p2 p2 p2 p2 p2 p2 p2 p2 p2 p2 .. .. .."
+        ".. .. .. p2 p2 p2 p2 p2 p2 p2 p2 p2 p2 .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        "hr hr hr hr hr hr hr hr hr hr hr hr hr hr hr hr"
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ;
+    }
+}
+
+@media screen and (max-width: 391px) {
+    .first-inner-container {
+        grid-template-rows: repeat(13, minmax(auto, 29px));
+        grid-template-areas: 
+    ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+    ".. .. .. .. .. .. .. .. .. fc fc fc fc fc .. .."
+    ".. .. .. .. .. .. .. .. .. fc fc fc fc fc .. .."
+    ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+    ".. h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 .."
+    ".. h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 .."
+    ".. pp pp pp pp pp pp pp pp pp pp pp pp pp pp .."
+    ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+    ".. sc sc sc sc .. .. .. .. .. .. .. .. .. .. .."
+    ".. sc sc sc sc .. .. .. .. .. .. .. .. .. .. .."
+    ".. .. mm mm mm mm mm mm mm mm mm mm mm mm .. .."
+    ".. .. mm mm mm mm mm mm mm mm mm mm mm mm .. .."
+    ".. .. mm mm mm mm mm mm mm mm mm mm mm mm .. .."
+    ;
+    }
+
+    h1 {
+        font-size: 3em;
+    }
+
+    .last-inner-container {
+        grid-template-rows: repeat(13, minmax(29px, auto));
+        grid-template-areas: 
+        ".. .. .. h8 h8 h8 h8 h8 h8 h8 h8 h8 h8 .. .. .."
+        ".. .. .. h9 h9 h9 h9 h9 h9 h9 h9 h9 h9 .. .. .."
+        ".. .. .. p6 p6 p6 p6 p6 p6 p6 p6 p6 p6 .. .. .."
+        ".. .. .. p6 p6 p6 p6 p6 p6 p6 p6 p6 p6 .. .. .."
+        ".. .. .. p6 p6 p6 p6 p6 p6 p6 p6 p6 p6 .. .. .."
+        ".. .. .. p6 p6 p6 p6 p6 p6 p6 p6 p6 p6 .. .. .."
+        ".. .. .. p6 p6 p6 p6 p6 p6 p6 p6 p6 p6 .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ".. .. .. .. .. .. bb bb bb bb .. .. .. .. .. .."
+        ".. .. .. .. .. .. bb bb bb bb .. .. .. .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ;
+    }
+    .second-inner-container {
+        grid-template-rows: repeat(19, minmax(29px, auto));
+        grid-template-areas: 
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ".. .. .. .. .. ff ff ff ff ff ff .. .. .. .. .."
+        ".. .. .. .. .. ff ff ff ff ff ff .. .. .. .. .."
+        ".. .. .. .. .. ff ff ff ff ff ff .. .. .. .. .."
+        ".. .. .. .. .. ff ff ff ff ff ff .. .. .. .. .."
+        ".. .. .. .. .. ff ff ff ff ff ff .. .. .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ".. .. .. .. .. h2 h2 h2 h2 h2 h2 .. .. .. .. .."
+        ".. .. .. .. .. h2 h2 h2 h2 h2 h2 .. .. .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ".. .. .. p2 p2 p2 p2 p2 p2 p2 p2 p2 p2 .. .. .."
+        ".. .. .. p2 p2 p2 p2 p2 p2 p2 p2 p2 p2 .. .. .."
+        ".. .. .. p2 p2 p2 p2 p2 p2 p2 p2 p2 p2 .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        "hr hr hr hr hr hr hr hr hr hr hr hr hr hr hr hr"
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ;
+    }
+}
+
+@media screen and (max-width: 333px) {
+    .first-inner-container {
+        grid-template-rows: repeat(12, minmax(auto, 29px));
+        grid-template-areas: 
+    ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+    ".. .. .. .. .. .. .. .. .. fc fc fc fc fc .. .."
+    ".. .. .. .. .. .. .. .. .. fc fc fc fc fc .. .."
+    ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+    ".. h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 .."
+    ".. h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 .."
+    ".. pp pp pp pp pp pp pp pp pp pp pp pp pp pp .."
+    ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+    ".. sc sc sc sc .. .. .. .. .. .. .. .. .. .. .."
+    ".. sc sc sc sc .. .. .. .. .. .. .. .. .. .. .."
+    ".. .. mm mm mm mm mm mm mm mm mm mm mm mm .. .."
+    ".. .. mm mm mm mm mm mm mm mm mm mm mm mm .. .."
+    ;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .last-inner-container {
+        grid-template-rows: repeat(13, minmax(29px, auto));
+        grid-template-areas: 
+        ".. .. .. h8 h8 h8 h8 h8 h8 h8 h8 h8 h8 .. .. .."
+        ".. .. .. h9 h9 h9 h9 h9 h9 h9 h9 h9 h9 .. .. .."
+        ".. .. .. p6 p6 p6 p6 p6 p6 p6 p6 p6 p6 .. .. .."
+        ".. .. .. p6 p6 p6 p6 p6 p6 p6 p6 p6 p6 .. .. .."
+        ".. .. .. p6 p6 p6 p6 p6 p6 p6 p6 p6 p6 .. .. .."
+        ".. .. .. p6 p6 p6 p6 p6 p6 p6 p6 p6 p6 .. .. .."
+        ".. .. .. p6 p6 p6 p6 p6 p6 p6 p6 p6 p6 .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ".. .. .. .. .. .. bb bb bb bb .. .. .. .. .. .."
+        ".. .. .. .. .. .. bb bb bb bb .. .. .. .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ;
+    }
+
+    .second-inner-container {
+        grid-template-rows: repeat(19, minmax(29px, auto));
+        grid-template-areas: 
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ".. .. .. .. .. ff ff ff ff ff ff .. .. .. .. .."
+        ".. .. .. .. .. ff ff ff ff ff ff .. .. .. .. .."
+        ".. .. .. .. .. ff ff ff ff ff ff .. .. .. .. .."
+        ".. .. .. .. .. ff ff ff ff ff ff .. .. .. .. .."
+        ".. .. .. .. .. ff ff ff ff ff ff .. .. .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ".. .. .. .. .. h2 h2 h2 h2 h2 h2 .. .. .. .. .."
+        ".. .. .. .. .. h2 h2 h2 h2 h2 h2 .. .. .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ".. .. .. p2 p2 p2 p2 p2 p2 p2 p2 p2 p2 .. .. .."
+        ".. .. .. p2 p2 p2 p2 p2 p2 p2 p2 p2 p2 .. .. .."
+        ".. .. .. p2 p2 p2 p2 p2 p2 p2 p2 p2 p2 .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        "hr hr hr hr hr hr hr hr hr hr hr hr hr hr hr hr"
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ;
+    }
+}
+
+@media screen and (max-width: 313px) {
+    .first-inner-container {
+        grid-template-rows: repeat(12, minmax(auto, 29px));
+        grid-template-areas: 
+    ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+    ".. .. .. .. .. .. .. .. .. fc fc fc fc fc .. .."
+    ".. .. .. .. .. .. .. .. .. fc fc fc fc fc .. .."
+    ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+    ".. h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 .."
+    ".. h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 .."
+    ".. pp pp pp pp pp pp pp pp pp pp pp pp pp pp .."
+    ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+    ".. sc sc sc sc .. .. .. .. .. .. .. .. .. .. .."
+    ".. sc sc sc sc .. .. .. .. .. .. .. .. .. .. .."
+    ".. .. mm mm mm mm mm mm mm mm mm mm mm mm .. .."
+    ".. .. mm mm mm mm mm mm mm mm mm mm mm mm .. .."
+    ;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .last-inner-container {
+        grid-template-rows: repeat(13, minmax(29px, auto));
+        grid-template-areas: 
+        ".. .. .. h8 h8 h8 h8 h8 h8 h8 h8 h8 h8 .. .. .."
+        ".. .. .. h9 h9 h9 h9 h9 h9 h9 h9 h9 h9 .. .. .."
+        ".. .. .. p6 p6 p6 p6 p6 p6 p6 p6 p6 p6 .. .. .."
+        ".. .. .. p6 p6 p6 p6 p6 p6 p6 p6 p6 p6 .. .. .."
+        ".. .. .. p6 p6 p6 p6 p6 p6 p6 p6 p6 p6 .. .. .."
+        ".. .. .. p6 p6 p6 p6 p6 p6 p6 p6 p6 p6 .. .. .."
+        ".. .. .. p6 p6 p6 p6 p6 p6 p6 p6 p6 p6 .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ".. .. .. .. .. .. bb bb bb bb .. .. .. .. .. .."
+        ".. .. .. .. .. .. bb bb bb bb .. .. .. .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ;
+    }
+
+    .second-inner-container {
+        grid-template-rows: repeat(19, minmax(29px, auto));
+        grid-template-areas: 
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ".. .. .. .. .. ff ff ff ff ff ff .. .. .. .. .."
+        ".. .. .. .. .. ff ff ff ff ff ff .. .. .. .. .."
+        ".. .. .. .. .. ff ff ff ff ff ff .. .. .. .. .."
+        ".. .. .. .. .. ff ff ff ff ff ff .. .. .. .. .."
+        ".. .. .. .. .. ff ff ff ff ff ff .. .. .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ".. .. .. .. .. h2 h2 h2 h2 h2 h2 .. .. .. .. .."
+        ".. .. .. .. .. h2 h2 h2 h2 h2 h2 .. .. .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ".. .. .. p2 p2 p2 p2 p2 p2 p2 p2 p2 p2 .. .. .."
+        ".. .. .. p2 p2 p2 p2 p2 p2 p2 p2 p2 p2 .. .. .."
+        ".. .. .. p2 p2 p2 p2 p2 p2 p2 p2 p2 p2 .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        "hr hr hr hr hr hr hr hr hr hr hr hr hr hr hr hr"
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ;
+    }
+}
+
+/*below is the code for after the first inner container*/
+
+.second-inner-container {
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(19, minmax(29px, auto));
+    color: #030694;
+    grid-template-areas: 
+    ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+    ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+    ".. .. .. .. .. ff ff ff ff ff ff .. .. .. .. .."
+    ".. .. .. .. .. ff ff ff ff ff ff .. .. .. .. .."
+    ".. .. .. .. .. ff ff ff ff ff ff .. .. .. .. .."
+    ".. .. .. .. .. ff ff ff ff ff ff .. .. .. .. .."
+    ".. .. .. .. .. ff ff ff ff ff ff .. .. .. .. .."
+    ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+    ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+    ".. .. .. .. .. h2 h2 h2 h2 h2 h2 .. .. .. .. .."
+    ".. .. .. .. .. h2 h2 h2 h2 h2 h2 .. .. .. .. .."
+    ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+    ".. .. .. .. p2 p2 p2 p2 p2 p2 p2 p2 .. .. .. .."
+    ".. .. .. .. p2 p2 p2 p2 p2 p2 p2 p2 .. .. .. .."
+    ".. .. .. .. p2 p2 p2 p2 p2 p2 p2 p2 .. .. .. .."
+    ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+    "hr hr hr hr hr hr hr hr hr hr hr hr hr hr hr hr"
+    ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+    ;
+}
+
+.second-inner-container h2 {
+    grid-area: h2;
+    padding-top: 10px;
+    color: #FF4136;
+}
+
+.second-inner-container p {
+    grid-area: p2;
+}
+
+.fred {
+    grid-area: ff;
+}
+
+hr {
+    grid-area: hr;
+    width: 100px;
+    border: none;
+    border-top: dotted;
+    width: 4%;
+    color: black;
+}
+
+.second-inner-container > * {
+    justify-self: center;
+}
+
+/*below is the code for after the second inner container*/
+
+.code-image {
+    /* width: minmax(25%, 100px); */
+    grid-area: ff;
+    justify-self: end;
+    align-self: center;
+    margin-right: -15% ;
+    width: 90%;
+}
+
+.third-inner-container {
+    display: grid;
+    color: #030694;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(18, minmax(29px, auto));
+    grid-template-areas: 
+    ".. .. .. h4 h4 h4 h4 h4 h4 h4 h4 h4 h4 .. .. .."
+    ".. .. .. h4 h4 h4 h4 h4 h4 h4 h4 h4 h4 .. .. .."
+    ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+    ".. .. ff ff ff ff .. h3 h3 h3 h3 .. .. .. .. .."
+    ".. .. ff ff ff ff .. p3 p3 p3 p3 p3 p3 p3 .. .."
+    ".. .. ff ff ff ff .. p3 p3 p3 p3 p3 p3 p3 .. .."
+    ".. .. ff ff ff ff .. p3 p3 p3 p3 p3 p3 p3 .. .."
+    ".. .. ff ff ff ff .. p3 p3 p3 p3 p3 p3 p3 .. .."
+    ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+    ".. .. h6 h6 h6 h6 h6 h6 h6 .. yy yy yy yy .. .."
+    ".. .. p4 p4 p4 p4 p4 p4 p4 .. yy yy yy yy .. .."
+    ".. .. p4 p4 p4 p4 p4 p4 p4 .. yy yy yy yy .. .."
+    ".. .. p4 p4 p4 p4 p4 p4 p4 .. yy yy yy yy .. .."
+    ".. .. p4 p4 p4 p4 p4 p4 p4 .. yy yy yy yy .. .."
+    ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+    "hr hr hr hr hr hr hr hr hr hr hr hr hr hr hr hr"
+    ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+    ;
+}
+
+.third-inner-container > * {
+    justify-self: center;
+}
+
+.third-inner-container h2 {
+    grid-area: h4;
+    color: #FF4136;
+}
+
+.third-inner-container p {
+    grid-area: p3;
+}
+
+h3.design {
+    grid-area: h3;
+    justify-self: start;
+    margin-bottom: 0;
+    color: black;
+}
+
+
+p.weird {
+    grid-area: p4;
+}
+
+.yinyang {
+    grid-area: yy;
+    align-self: center;
+    margin-left: -15%;
+    justify-self: start;
+    margin-top: -5%;
+    width: 90%;
+}
+
+h3.weird {
+    grid-area: h6;
+    justify-self: start;
+    margin-bottom: 0;
+    color: black;
+}
+
+/*Below is for the last container before footer*/
+
+.last-inner-container {
+    display: grid;
+    color: #030694;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(11, minmax(29px, auto));
+    grid-template-areas: 
+    ".. .. .. h8 h8 h8 h8 h8 h8 h8 h8 h8 h8 .. .. .."
+    ".. .. .. h9 h9 h9 h9 h9 h9 h9 h9 h9 h9 .. .. .."
+    ".. .. .. .. p6 p6 p6 p6 p6 p6 p6 p6 .. .. .. .."
+    ".. .. .. .. p6 p6 p6 p6 p6 p6 p6 p6 .. .. .. .."
+    ".. .. .. .. p6 p6 p6 p6 p6 p6 p6 p6 .. .. .. .."
+    ".. .. .. .. p6 p6 p6 p6 p6 p6 p6 p6 .. .. .. .."
+    ".. .. .. .. p6 p6 p6 p6 p6 p6 p6 p6 .. .. .. .."
+    ".. .. .. .. .. .. bb bb bb bb .. .. .. .. .. .."
+    ".. .. .. .. .. .. bb bb bb bb .. .. .. .. .. .."
+    ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+    ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+    ;
+}
+
+h2.h8 {
+    grid-area: h8;
+    color: #FF4136;
+}
+
+h3.h9 {
+    grid-area: h9;
+    color: black;
+}
+
+p.p6 {
+    grid-area: p6;
+}
+
+.btn {
+    grid-area: bb;
+}
+
+.last-inner-container > * {
+    justify-self: center;
+}
+
+/*below is for footer*/
+
+footer {
+    display: grid;
+    justify-items: center;
+    background-color: #0074d9;
+    color: #f3f3f3;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(3, minmax(30px, auto));
+    grid-template-areas:
+    ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .." 
+    ".. .. .. ll ll ll ll ll ll ll ll ll ll .. .. .."
+    ".. .. p5 p5 p5 p5 p5 p5 p5 p5 p5 p5 p5 p5 .. .."
+    ;
+}
+
+footer > ul {
+    display: flex;
+    list-style-type: none;
+    grid-area: ll;
+    padding-left: 0;
+    padding-inline-start: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    font-weight: bold;
+}
+
+footer li {
+    display: inline;
+}
+
+footer > p {
+    grid-area: p5;
+    font-size: 0.75rem;
+}
+
+a{
+    text-decoration: none;
+}
+
+.whatsapp {
+    padding-right: 30px;
+}
+
+a:link {
+    color: red;
+}
+
+a:hover {
+    color:  #f3f3f3;;
+}
+
+.button {
+    margin-top: 20px;
+    background: #0074d9;
+    background-image: -webkit-linear-gradient(top, #0074d9, #a8706a);
+    background-image: -moz-linear-gradient(top, #0074d9, #a8706a);
+    background-image: -ms-linear-gradient(top, #0074d9, #a8706a);
+    background-image: -o-linear-gradient(top, #0074d9, #a8706a);
+    background-image: linear-gradient(to bottom, #0074d9, #a8706a);
+    -webkit-border-radius: 16;
+    -moz-border-radius: 16;
+    border-radius: 16px;
+    font-family: Arial;
+    color: #f3f3f3;;
+    font-size: 14px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+  }
+  
+  .button:hover {
+    background: #355c70;
+    background-image: -webkit-linear-gradient(top, #355c70, #0074d9);
+    background-image: -moz-linear-gradient(top, #355c70, #0074d9);
+    background-image: -ms-linear-gradient(top, #355c70, #0074d9);
+    background-image: -o-linear-gradient(top, #355c70, #0074d9);
+    background-image: linear-gradient(to bottom, #355c70, #0074d9);
+    text-decoration: none;
+  }
+
+  @media screen and (max-width: 550px) {
+    .first-inner-container {
+        grid-template-rows: repeat(16, minmax(auto, 29px));
+        grid-template-areas: 
+    ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+    ".. .. .. .. .. .. .. .. .. fc fc fc fc fc .. .."
+    ".. .. .. .. .. .. .. .. .. fc fc fc fc fc .. .."
+    ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+    ".. h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 .."
+    ".. h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 .."
+    ".. pp pp pp pp pp pp pp pp pp pp pp pp pp pp .."
+    ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+    ".. sc sc sc sc .. .. .. .. .. .. .. .. .. .. .."
+    ".. sc sc sc sc .. .. .. .. .. .. .. .. .. .. .."
+    ".. .. mm mm mm mm mm mm mm mm mm mm mm mm .. .."
+    ".. .. mm mm mm mm mm mm mm mm mm mm mm mm .. .."
+    ".. .. mm mm mm mm mm mm mm mm mm mm mm mm .. .."
+    ".. .. mm mm mm mm mm mm mm mm mm mm mm mm .. .."
+    ".. .. mm mm mm mm mm mm mm mm mm mm mm mm .. .."
+    ".. .. mm mm mm mm mm mm mm mm mm mm mm mm .. .."
+    ;
+    }
+
+    h1 {
+        font-size: 3em;
+    }
+    .last-inner-container {
+        grid-template-rows: repeat(13, minmax(29px, auto));
+        grid-template-areas: 
+        ".. .. .. h8 h8 h8 h8 h8 h8 h8 h8 h8 h8 .. .. .."
+        ".. .. .. h9 h9 h9 h9 h9 h9 h9 h9 h9 h9 .. .. .."
+        ".. .. .. p6 p6 p6 p6 p6 p6 p6 p6 p6 p6 .. .. .."
+        ".. .. .. p6 p6 p6 p6 p6 p6 p6 p6 p6 p6 .. .. .."
+        ".. .. .. p6 p6 p6 p6 p6 p6 p6 p6 p6 p6 .. .. .."
+        ".. .. .. p6 p6 p6 p6 p6 p6 p6 p6 p6 p6 .. .. .."
+        ".. .. .. p6 p6 p6 p6 p6 p6 p6 p6 p6 p6 .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ".. .. .. .. .. .. bb bb bb bb .. .. .. .. .. .."
+        ".. .. .. .. .. .. bb bb bb bb .. .. .. .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ;
+    }
+
+    .second-inner-container {
+        grid-template-rows: repeat(19, minmax(29px, auto));
+        grid-template-areas: 
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ".. .. .. .. .. ff ff ff ff ff ff .. .. .. .. .."
+        ".. .. .. .. .. ff ff ff ff ff ff .. .. .. .. .."
+        ".. .. .. .. .. ff ff ff ff ff ff .. .. .. .. .."
+        ".. .. .. .. .. ff ff ff ff ff ff .. .. .. .. .."
+        ".. .. .. .. .. ff ff ff ff ff ff .. .. .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ".. .. .. .. .. h2 h2 h2 h2 h2 h2 .. .. .. .. .."
+        ".. .. .. .. .. h2 h2 h2 h2 h2 h2 .. .. .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ".. .. .. p2 p2 p2 p2 p2 p2 p2 p2 p2 p2 .. .. .."
+        ".. .. .. p2 p2 p2 p2 p2 p2 p2 p2 p2 p2 .. .. .."
+        ".. .. .. p2 p2 p2 p2 p2 p2 p2 p2 p2 p2 .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        "hr hr hr hr hr hr hr hr hr hr hr hr hr hr hr hr"
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ;
+    }
+    .last-inner-container {
+        display: grid;
+        color: #030694;
+        grid-template-columns: repeat(16, 1fr);
+        grid-template-rows: repeat(11, minmax(29px, auto));
+        grid-template-areas: 
+        ".. .. .. h8 h8 h8 h8 h8 h8 h8 h8 h8 h8 .. .. .."
+        ".. .. .. h9 h9 h9 h9 h9 h9 h9 h9 h9 h9 .. .. .."
+        ".. .. .. p6 p6 p6 p6 p6 p6 p6 p6 p6 p6 .. .. .."
+        ".. .. .. p6 p6 p6 p6 p6 p6 p6 p6 p6 p6 .. .. .."
+        ".. .. .. p6 p6 p6 p6 p6 p6 p6 p6 p6 p6 .. .. .."
+        ".. .. .. p6 p6 p6 p6 p6 p6 p6 p6 p6 p6 .. .. .."
+        ".. .. .. p6 p6 p6 p6 p6 p6 p6 p6 p6 p6 .. .. .."
+        ".. .. .. .. .. .. bb bb bb bb .. .. .. .. .. .."
+        ".. .. .. .. .. .. bb bb bb bb .. .. .. .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ;
+    }
+}
+
+@media screen and (max-width: 471px) {
+    .first-inner-container {
+        grid-template-rows: repeat(14, minmax(auto, 29px));
+        grid-template-areas: 
+    ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+    ".. .. .. .. .. .. .. .. .. fc fc fc fc fc .. .."
+    ".. .. .. .. .. .. .. .. .. fc fc fc fc fc .. .."
+    ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+    ".. h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 .."
+    ".. h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 .."
+    ".. pp pp pp pp pp pp pp pp pp pp pp pp pp pp .."
+    ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+    ".. sc sc sc sc .. .. .. .. .. .. .. .. .. .. .."
+    ".. sc sc sc sc .. .. .. .. .. .. .. .. .. .. .."
+    ".. .. mm mm mm mm mm mm mm mm mm mm mm mm .. .."
+    ".. .. mm mm mm mm mm mm mm mm mm mm mm mm .. .."
+    ".. .. mm mm mm mm mm mm mm mm mm mm mm mm .. .."
+    ".. .. mm mm mm mm mm mm mm mm mm mm mm mm .. .."
+    ;
+    }
+
+    .second-cloud {
+        width: 90%;
+    }
+    h1 {
+        font-size: 3em;
+    }
+
+    .last-inner-container {
+        grid-template-rows: repeat(13, minmax(29px, auto));
+        grid-template-areas: 
+        ".. .. .. h8 h8 h8 h8 h8 h8 h8 h8 h8 h8 .. .. .."
+        ".. .. .. h9 h9 h9 h9 h9 h9 h9 h9 h9 h9 .. .. .."
+        ".. .. .. p6 p6 p6 p6 p6 p6 p6 p6 p6 p6 .. .. .."
+        ".. .. .. p6 p6 p6 p6 p6 p6 p6 p6 p6 p6 .. .. .."
+        ".. .. .. p6 p6 p6 p6 p6 p6 p6 p6 p6 p6 .. .. .."
+        ".. .. .. p6 p6 p6 p6 p6 p6 p6 p6 p6 p6 .. .. .."
+        ".. .. .. p6 p6 p6 p6 p6 p6 p6 p6 p6 p6 .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ".. .. .. .. .. .. bb bb bb bb .. .. .. .. .. .."
+        ".. .. .. .. .. .. bb bb bb bb .. .. .. .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ;
+    }
+
+    .second-inner-container {
+        grid-template-rows: repeat(19, minmax(29px, auto));
+        grid-template-areas: 
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ".. .. .. .. .. ff ff ff ff ff ff .. .. .. .. .."
+        ".. .. .. .. .. ff ff ff ff ff ff .. .. .. .. .."
+        ".. .. .. .. .. ff ff ff ff ff ff .. .. .. .. .."
+        ".. .. .. .. .. ff ff ff ff ff ff .. .. .. .. .."
+        ".. .. .. .. .. ff ff ff ff ff ff .. .. .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ".. .. .. .. .. h2 h2 h2 h2 h2 h2 .. .. .. .. .."
+        ".. .. .. .. .. h2 h2 h2 h2 h2 h2 .. .. .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ".. .. .. p2 p2 p2 p2 p2 p2 p2 p2 p2 p2 .. .. .."
+        ".. .. .. p2 p2 p2 p2 p2 p2 p2 p2 p2 p2 .. .. .."
+        ".. .. .. p2 p2 p2 p2 p2 p2 p2 p2 p2 p2 .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        "hr hr hr hr hr hr hr hr hr hr hr hr hr hr hr hr"
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ;
+    }
+}
+
+@media screen and (max-width: 391px) {
+    .first-inner-container {
+        grid-template-rows: repeat(13, minmax(auto, 29px));
+        grid-template-areas: 
+    ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+    ".. .. .. .. .. .. .. .. .. fc fc fc fc fc .. .."
+    ".. .. .. .. .. .. .. .. .. fc fc fc fc fc .. .."
+    ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+    ".. h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 .."
+    ".. h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 .."
+    ".. pp pp pp pp pp pp pp pp pp pp pp pp pp pp .."
+    ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+    ".. sc sc sc sc .. .. .. .. .. .. .. .. .. .. .."
+    ".. sc sc sc sc .. .. .. .. .. .. .. .. .. .. .."
+    ".. .. mm mm mm mm mm mm mm mm mm mm mm mm .. .."
+    ".. .. mm mm mm mm mm mm mm mm mm mm mm mm .. .."
+    ".. .. mm mm mm mm mm mm mm mm mm mm mm mm .. .."
+    ;
+    }
+
+    h1 {
+        font-size: 3em;
+    }
+
+    .last-inner-container {
+        grid-template-rows: repeat(13, minmax(29px, auto));
+        grid-template-areas: 
+        ".. .. .. h8 h8 h8 h8 h8 h8 h8 h8 h8 h8 .. .. .."
+        ".. .. .. h9 h9 h9 h9 h9 h9 h9 h9 h9 h9 .. .. .."
+        ".. .. .. p6 p6 p6 p6 p6 p6 p6 p6 p6 p6 .. .. .."
+        ".. .. .. p6 p6 p6 p6 p6 p6 p6 p6 p6 p6 .. .. .."
+        ".. .. .. p6 p6 p6 p6 p6 p6 p6 p6 p6 p6 .. .. .."
+        ".. .. .. p6 p6 p6 p6 p6 p6 p6 p6 p6 p6 .. .. .."
+        ".. .. .. p6 p6 p6 p6 p6 p6 p6 p6 p6 p6 .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ".. .. .. .. .. .. bb bb bb bb .. .. .. .. .. .."
+        ".. .. .. .. .. .. bb bb bb bb .. .. .. .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ;
+    }
+    .second-inner-container {
+        grid-template-rows: repeat(19, minmax(29px, auto));
+        grid-template-areas: 
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ".. .. .. .. .. ff ff ff ff ff ff .. .. .. .. .."
+        ".. .. .. .. .. ff ff ff ff ff ff .. .. .. .. .."
+        ".. .. .. .. .. ff ff ff ff ff ff .. .. .. .. .."
+        ".. .. .. .. .. ff ff ff ff ff ff .. .. .. .. .."
+        ".. .. .. .. .. ff ff ff ff ff ff .. .. .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ".. .. .. .. .. h2 h2 h2 h2 h2 h2 .. .. .. .. .."
+        ".. .. .. .. .. h2 h2 h2 h2 h2 h2 .. .. .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ".. .. .. p2 p2 p2 p2 p2 p2 p2 p2 p2 p2 .. .. .."
+        ".. .. .. p2 p2 p2 p2 p2 p2 p2 p2 p2 p2 .. .. .."
+        ".. .. .. p2 p2 p2 p2 p2 p2 p2 p2 p2 p2 .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        "hr hr hr hr hr hr hr hr hr hr hr hr hr hr hr hr"
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ;
+    }
+}
+
+@media screen and (max-width: 333px) {
+    .first-inner-container {
+        grid-template-rows: repeat(12, minmax(auto, 29px));
+        grid-template-areas: 
+    ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+    ".. .. .. .. .. .. .. .. .. fc fc fc fc fc .. .."
+    ".. .. .. .. .. .. .. .. .. fc fc fc fc fc .. .."
+    ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+    ".. h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 .."
+    ".. h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 .."
+    ".. pp pp pp pp pp pp pp pp pp pp pp pp pp pp .."
+    ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+    ".. sc sc sc sc .. .. .. .. .. .. .. .. .. .. .."
+    ".. sc sc sc sc .. .. .. .. .. .. .. .. .. .. .."
+    ".. .. mm mm mm mm mm mm mm mm mm mm mm mm .. .."
+    ".. .. mm mm mm mm mm mm mm mm mm mm mm mm .. .."
+    ;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .last-inner-container {
+        grid-template-rows: repeat(13, minmax(29px, auto));
+        grid-template-areas: 
+        ".. .. .. h8 h8 h8 h8 h8 h8 h8 h8 h8 h8 .. .. .."
+        ".. .. .. h9 h9 h9 h9 h9 h9 h9 h9 h9 h9 .. .. .."
+        ".. .. .. p6 p6 p6 p6 p6 p6 p6 p6 p6 p6 .. .. .."
+        ".. .. .. p6 p6 p6 p6 p6 p6 p6 p6 p6 p6 .. .. .."
+        ".. .. .. p6 p6 p6 p6 p6 p6 p6 p6 p6 p6 .. .. .."
+        ".. .. .. p6 p6 p6 p6 p6 p6 p6 p6 p6 p6 .. .. .."
+        ".. .. .. p6 p6 p6 p6 p6 p6 p6 p6 p6 p6 .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ".. .. .. .. .. .. bb bb bb bb .. .. .. .. .. .."
+        ".. .. .. .. .. .. bb bb bb bb .. .. .. .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ;
+    }
+
+    .second-inner-container {
+        grid-template-rows: repeat(19, minmax(29px, auto));
+        grid-template-areas: 
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ".. .. .. .. .. ff ff ff ff ff ff .. .. .. .. .."
+        ".. .. .. .. .. ff ff ff ff ff ff .. .. .. .. .."
+        ".. .. .. .. .. ff ff ff ff ff ff .. .. .. .. .."
+        ".. .. .. .. .. ff ff ff ff ff ff .. .. .. .. .."
+        ".. .. .. .. .. ff ff ff ff ff ff .. .. .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ".. .. .. .. .. h2 h2 h2 h2 h2 h2 .. .. .. .. .."
+        ".. .. .. .. .. h2 h2 h2 h2 h2 h2 .. .. .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ".. .. .. p2 p2 p2 p2 p2 p2 p2 p2 p2 p2 .. .. .."
+        ".. .. .. p2 p2 p2 p2 p2 p2 p2 p2 p2 p2 .. .. .."
+        ".. .. .. p2 p2 p2 p2 p2 p2 p2 p2 p2 p2 .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        "hr hr hr hr hr hr hr hr hr hr hr hr hr hr hr hr"
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ;
+    }
+}
+
+@media screen and (max-width: 313px) {
+    .first-inner-container {
+        grid-template-rows: repeat(12, minmax(auto, 29px));
+        grid-template-areas: 
+    ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+    ".. .. .. .. .. .. .. .. .. fc fc fc fc fc .. .."
+    ".. .. .. .. .. .. .. .. .. fc fc fc fc fc .. .."
+    ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+    ".. h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 .."
+    ".. h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 .."
+    ".. pp pp pp pp pp pp pp pp pp pp pp pp pp pp .."
+    ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+    ".. sc sc sc sc .. .. .. .. .. .. .. .. .. .. .."
+    ".. sc sc sc sc .. .. .. .. .. .. .. .. .. .. .."
+    ".. .. mm mm mm mm mm mm mm mm mm mm mm mm .. .."
+    ".. .. mm mm mm mm mm mm mm mm mm mm mm mm .. .."
+    ;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .last-inner-container {
+        grid-template-rows: repeat(13, minmax(29px, auto));
+        grid-template-areas: 
+        ".. .. .. h8 h8 h8 h8 h8 h8 h8 h8 h8 h8 .. .. .."
+        ".. .. .. h9 h9 h9 h9 h9 h9 h9 h9 h9 h9 .. .. .."
+        ".. .. .. p6 p6 p6 p6 p6 p6 p6 p6 p6 p6 .. .. .."
+        ".. .. .. p6 p6 p6 p6 p6 p6 p6 p6 p6 p6 .. .. .."
+        ".. .. .. p6 p6 p6 p6 p6 p6 p6 p6 p6 p6 .. .. .."
+        ".. .. .. p6 p6 p6 p6 p6 p6 p6 p6 p6 p6 .. .. .."
+        ".. .. .. p6 p6 p6 p6 p6 p6 p6 p6 p6 p6 .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ".. .. .. .. .. .. bb bb bb bb .. .. .. .. .. .."
+        ".. .. .. .. .. .. bb bb bb bb .. .. .. .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ;
+    }
+
+    .second-inner-container {
+        grid-template-rows: repeat(19, minmax(29px, auto));
+        grid-template-areas: 
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ".. .. .. .. .. ff ff ff ff ff ff .. .. .. .. .."
+        ".. .. .. .. .. ff ff ff ff ff ff .. .. .. .. .."
+        ".. .. .. .. .. ff ff ff ff ff ff .. .. .. .. .."
+        ".. .. .. .. .. ff ff ff ff ff ff .. .. .. .. .."
+        ".. .. .. .. .. ff ff ff ff ff ff .. .. .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ".. .. .. .. .. h2 h2 h2 h2 h2 h2 .. .. .. .. .."
+        ".. .. .. .. .. h2 h2 h2 h2 h2 h2 .. .. .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ".. .. .. p2 p2 p2 p2 p2 p2 p2 p2 p2 p2 .. .. .."
+        ".. .. .. p2 p2 p2 p2 p2 p2 p2 p2 p2 p2 .. .. .."
+        ".. .. .. p2 p2 p2 p2 p2 p2 p2 p2 p2 p2 .. .. .."
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        "hr hr hr hr hr hr hr hr hr hr hr hr hr hr hr hr"
+        ".. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .."
+        ;
+    }
+}
